@@ -14,6 +14,11 @@ class AdminController extends Controller
         return view('all_texts', compact('veri')); 
 
     }
+    public function delete($id)
+    {
+        All_texts::deleteData($id);
+        return back(); 
+    }
     public function dene()
     {
         $veri = new stdClass;

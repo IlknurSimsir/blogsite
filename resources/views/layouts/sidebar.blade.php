@@ -31,7 +31,7 @@
             </div>
             <div class="item">
                 <i class='bx bx-folder'></i>
-                <a href="#">Resources</a>
+                <a href="/createtext">Yazı Oluştur</a>
             </div>
             <div class="item">
                 <i class='bx bx-message-square-dots'></i>

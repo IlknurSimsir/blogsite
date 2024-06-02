@@ -30,6 +30,7 @@ i {
     padding: 40px 0;
     background-color: #f8f9fa;
     border-right: 1px solid #ddd;
+   
 }
 
 .container .left-section .logo {
@@ -443,9 +444,7 @@ main .planning .item>i {
     width: 244px;
     height: 60px;
     border-radius: 16px;
-    position: fixed;
-    bottom: 0; /* Sayfanın en altına sabitlemek için */
-    left: 0; /* Sol tarafa sabitlemek için */
+
 }
 
 .profile>i {

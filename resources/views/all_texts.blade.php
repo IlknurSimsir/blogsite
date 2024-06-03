@@ -35,6 +35,7 @@
                     <td>{!! $text->contents !!}</td>
                     <td style="text-align:center;">
                         <button type="button" class="btn bi bi-trash3" data-toggle="modal" data-target="#deleteTextModal{{$text->id}}"></button>
+                        <a href="/updatetext?eid={{$text->id}}" class="btn bi bi-pencil-square" ></a>
                     </td>
 
                 </tr>

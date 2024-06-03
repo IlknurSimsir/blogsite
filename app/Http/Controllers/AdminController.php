@@ -48,5 +48,37 @@ class AdminController extends Controller
 
         return redirect()->back()->with('success', 'Veri başarıyla kaydedildi!');
     }
+    public function updatetext()
+    {
+        $veri = new stdClass;
+        $veri -> subtitle = Subtitle::get(); 
+        $veri -> category = Category::get(); 
+        $veri -> all_texts = All_texts::get(); 
+        $eid = request('eid');
+        return view('update_text',['eid' => $eid,'veri'=> $veri]); 
+        
+    }
+    public function updatetextpost(Request $request)
+    {
+        // 'eid' parametresini al
+        $eid = $request->input('eid');
+
+        // Güncellenecek metni bul
+        $text = All_texts::find($eid);
+
+        if ($text) {
+            // Form verilerini modele atayın
+            $text->contents = $request->input('contents');
+            $text->category_id = $request->input('category');
+            $text->suptitle = $request->input('subtitle'); // 'suptitle' yerine 'subtitle_id' kullanımı
+
+            // Güncellenen veriyi kaydet
+            $text->save();
+
+            return redirect()->back()->with('success', 'Veri başarıyla güncellendi!');
+        } else {
+            return redirect()->back()->with('error', 'Veri bulunamadı.');
+        }
+    }
 
 }

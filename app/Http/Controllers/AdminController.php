@@ -13,7 +13,7 @@ class AdminController extends Controller
     {
         $veri = new stdClass;
         $veri -> all_texts = All_texts::get(); 
-        return view('all_texts', compact('veri')); 
+        return view('admin.all_texts', compact('veri')); 
 
     }
     public function delete($id)
@@ -25,7 +25,7 @@ class AdminController extends Controller
     {
         $veri = new stdClass;
         $veri -> all_texts = All_texts::get(); 
-        return view('dene', compact('veri')); 
+        return view('admin.dene', compact('veri')); 
     }
     
     public function createtext()
@@ -33,7 +33,7 @@ class AdminController extends Controller
         $veri = new stdClass;
         $veri -> subtitle = Subtitle::get(); 
         $veri -> category = Category::get(); 
-        return view('create_text',compact('veri')); 
+        return view('admin.create_text',compact('veri')); 
         
     }
     public function createtextpost(Request $request)
@@ -55,7 +55,7 @@ class AdminController extends Controller
         $veri -> category = Category::get(); 
         $veri -> all_texts = All_texts::get(); 
         $eid = request('eid');
-        return view('update_text',['eid' => $eid,'veri'=> $veri]); 
+        return view('admin.update_text',['eid' => $eid,'veri'=> $veri]); 
         
     }
     public function updatetextpost(Request $request)

@@ -3,7 +3,7 @@
 
 <body>
     <div class="container">
-    @include('layouts.sidebar')
+    @include('admin.layouts.sidebar')
         <main>
             <header>
                 <button class="menu-btn" id="menu-open">

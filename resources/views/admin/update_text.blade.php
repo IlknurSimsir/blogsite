@@ -11,7 +11,7 @@
     <script src="admin_assets/script.js"></script>
     <div class="container" style="grid-template-columns: 1fr 5fr;">
         <aside class="left-section">
-            @include('layouts.sidebar')
+            @include('admin.layouts.sidebar')
         </aside>
         <div class="container-fluid">
             @if(isset($eid))

@@ -3,7 +3,7 @@
 
 <body>
     <div class="container">
-    @include('layouts.sidebar')
+    @include('admin.layouts.sidebar')
     <table id="myTable">
                 <tr class="header">
                     <th style="width:90%;">Yazı</th>

@@ -26,7 +26,7 @@
                 <div class="item">
                     <div class="progress">
                         <div class="info">
-                            <h5>Locations</h5>
+                            <h5>Locationsss</h5>
                             <p>35 Lessons</p>
                         </div>
                         <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
